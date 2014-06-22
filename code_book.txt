@@ -1,0 +1,96 @@
+Code Book
+=================
+
+This code book modifies the "Features Selection" or features_info.txt file available in this
+repo at https://github.com/DanielFletcher1/getcleandataproject/blob/master/UCI%20HAR%20Dataset/features_info.txt.
+
+Instead of rewriting every line from the "Features Selection" file, the purpose of this code book is to give a brief synposis of the variables and units used within this getcleandataproject analysis, leading to the tidydataset.txt file.
+
+In addition to the numerous variables, below, the "tidy data set" in this repo associates train and test subject IDs with each observation (all the various variables captured by the smartphones), 1-30.
+
+Finally, an added value of the tidy data set in this repo is the appending of the physical activities video recorded during the study:
+
+"WALKING"
+"WALKING_UPSTAIRS"
+"WALKING_DOWNSTAIRS"
+"SITTING"
+"STANDING"
+"LAYING
+
+As indicated in the README.MD file of this repo (https://github.com/DanielFletcher1/getcleandataproject/blob/master/README.md), the tidy data set also combines a subset of mean/standard deviation variables and gives their average, broken down by subject ID and physical activity, providing summarized calculations unavailble in the raw data.
+
+
+Original Variables with summary
+==================================
+
+
+Variables1:
+
+tAcc-XYZ (raw accelerometer time signals)
+tGyro-XYZ (raw gyroscope time signals)
+
+Units1:  captured at a frequency of 50 Hz, then filtered at 20 Hz "to remove noise"
+
+
+Variables2 - taken from the accelration signal:
+
+tBodyAcc-XYZ (body acceleration time signals)
+tGravityAcc-XYZ (gravity acceleration time signals)
+
+Units2:  filtered at a frequency of 0.3 Hz.
+
+
+Variables3:
+
+tBodyAccJerk-XYZ (raw body jerk time signals from the accelerometer)
+tBodyGyroJerk-XYZ (raw body jerk time signals from the gyroscope)
+
+{3D signals calculated from the Euclidean norm:}
+
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+
+
+Variables4:
+
+{Frequency domain signals - XYZ indicates signals in the directions X, Y, Z.}
+
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+
+Estimates derived from the above variables (from original code book):
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autorregresion coefficients with Burg order equal to 4
+correlation(): correlation coefficient between two signals
+maxInds(): index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): skewness of the frequency domain signal 
+kurtosis(): kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between to vectors.
+
+
+Variables produced through averages across different periods of time:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
