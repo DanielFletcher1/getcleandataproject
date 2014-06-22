@@ -3,6 +3,8 @@ getcleandataproject
 
 Repo for Getting and Cleaning Data course project.
 
+PLEASE NOTE:  The "tidydataset.txt" file data will likely be truncated to 19 (out of 30) rows of data, due to the user's R settings.
+
 The run_analysis.R file in this repo reads into R a variety of wearable computing data points, collected using the Samsung Galaxy S smartphone.  The data is read into a number of data frames via the read.table function.
 
 Once all the relevant data has been stored in various data frames within R, the script then organizes and combines the data, piece by piece using the rbind() function, into one complete data frame that encapsulates observation points for 30 subjects (70% produced training data and 30% produced test data) across 561 variables of data gathered by the smartphone attached to the subjects' waist.
